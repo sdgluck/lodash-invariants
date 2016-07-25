@@ -48,6 +48,7 @@ If you have your own invariants, merge `lodash-invariants` into them:
 
 ```js
 // ./invariants.js
+import invariant from 'invariant'
 import lodashInvariants from 'lodash-invariants'
 
 export default Object.assign({}, {
