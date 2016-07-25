@@ -23,12 +23,39 @@ import invariants from 'lodash-invariants'
 var invariants = require('lodash-invariants')
 ```
 
-```html
-<!-- Script -->
-<script src="/node_modules/lodash-invariants/index.js"></script>
+## API
+
+### `invariants.is*(name, ...args)`
+
+- __name__ {String} Name of what is being inspected 
+- __...args__ {\*} Arguments to pass to the `lodash.is*` method
+
+Throws an Invariant Exception if the `lodash.is*` method returns false.
+
+## Example
+
+```js
+import invariants from 'lodash-invariants'
+
+function application (options) {
+  invariants.isString('options.url', options.url)
+}
+
+application({ url: 123 }) //=> Invariant Exception: Expecting options.url to be string, got number.
 ```
 
-## Usage
+If you have your own invariants, merge `lodash-invariants` into them:
+
+```js
+// ./invariants.js
+import lodashInvariants from 'lodash-invariants'
+
+export default Object.assign({}, {
+  customInvariant: (...args) => {
+    invariant(...args)
+  }
+}, lodashInvariants)
+```
 
 ## Contributing
 
