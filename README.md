@@ -32,6 +32,17 @@ var invariants = require('lodash-invariants')
 
 Throws an Invariant Exception if the `lodash.is*` method returns false.
 
+```js
+// The methods available...
+[
+  'isMap', 'isNaN', 'isNil', 'isSet', 'isDate', 'isNull', 'isArray', 'isEmpty', 'isEqual', 'isError',
+  'isMatch', 'isBuffer', 'isFinite', 'isLength', 'isNative', 'isNumber', 'isObject', 'isRegExp',
+  'isString', 'isSymbol', 'isBoolean', 'isElement', 'isInteger', 'isWeakMap', 'isWeakSet', 'isFunction',
+  'isArguments', 'isArrayLike', 'isEqualWith', 'isMatchWith', 'isUndefined', 'isObjectLike',
+  'isTypedArray', 'isArrayBuffer', 'isPlainObject', 'isSafeInteger', 'isArrayLikeObject'
+]
+```
+
 ## Example
 
 ```js
